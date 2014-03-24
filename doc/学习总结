@@ -1,0 +1,27 @@
+
+netty:
+
+ChannelInboundHandlerAdapter  实现它 用来实现转发操作到下一个ChannelHandler 通过  ChannelPipeline（事件消息通道管理通道队列（组）） ChannelOutboundHandlerAdapter 通过 ChannelHandlerContext 实现转发调用方法    
+
+输入通道处理设配器  输出处理适配器 
+
+
+and it could be represented as shown in the following example:
+ *
+ * <pre>
+ * static final {@link EventExecutorGroup} group = new {@link DefaultEventExecutorGroup}(16);
+ * ...
+ *
+ * {@link ChannelPipeline} pipeline = ch.pipeline();
+ *
+ * pipeline.addLast("decoder", new MyProtocolDecoder());
+ * pipeline.addLast("encoder", new MyProtocolEncoder());
+ *
+ * // Tell the pipeline to run MyBusinessLogicHandler's event handler methods
+ * // in a different thread than an I/O thread so that the I/O thread is not blocked by
+ * // a time-consuming task.
+ * // If your business logic is fully asynchronous or finished very quickly, you don't
+ * // need to specify a group.
+ * pipeline.addLast(group, "handler", new MyBusinessLogicHandler());
+ * </pre>
+ *
