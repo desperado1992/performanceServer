@@ -1,4 +1,3 @@
-performanceServer
-=================
-
-使用actor角色模型 加上  netty 服务器 实现高性能高吞吐的服务器
+﻿采用AIO实现的高吞吐的服务器 用于以后去掉个人正在开发的另一个项目distributeTemplate的对Netty的依赖 
+http://my.oschina.net/yilian/blog
+  
