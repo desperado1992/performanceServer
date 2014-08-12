@@ -217,42 +217,11 @@
 		</repository>   
 	</repositories>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.2.4.RELEASE</spring.version>
-		 <commons-lang3.version>3.1</commons-lang3.version>
-		  <netty.version>4.0.17.Final</netty.version>
+		
 	</properties>
   <dependencies>
-   
- <dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
-		</dependency>
 
- <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty.version}</version>
-        </dependency>
-	
-	<dependency>
-        <groupId>com.typesafe.akka</groupId>
-        <artifactId>akka-actor_2.10</artifactId>
-        <version>2.2.4</version>
-    </dependency>
-    <dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-kernel_2.10</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-<!-- 	<dependency> -->
-<!--   <groupId>com.typesafe.akka</groupId> -->
-<!--   <artifactId>akka-remote</artifactId> -->
-<!--   <version>2.1-M1</version> -->
-<!-- </dependency> -->
-	<dependency>
+<dependency>
 	<groupId>com.google.guava</groupId>
 	<artifactId>guava</artifactId>
 	<version>13.0-final</version>
